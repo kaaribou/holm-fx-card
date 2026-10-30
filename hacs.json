@@ -1,0 +1,7 @@
+{
+  "name": "HOLM FX",
+  "render_readme": true,
+  "content_in_root": false,
+  "filename": "holm-fx-card.js",
+  "homeassistant": "2025.1.0"
+}
