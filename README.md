@@ -1,5 +1,7 @@
 # ✨ HOLM FX
 
+🇫🇷 Français · [🇬🇧 English](README.en.md)
+
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
 ![Version](https://img.shields.io/github/v/release/kaaribou/holm-fx-card)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-03a9f4)
@@ -19,6 +21,7 @@ HOLM FX enveloppe une carte existante (tuile, Mushroom, Bubble, une carte HOLM�
 - 🔌 **Déclenchement par entité** : état, attribut, seuil (au-dessus / en dessous) ; pour un thermostat, l'action en cours (chauffe, refroidit) est lue automatiquement.
 - 😴 **Quand c'est inactif** : halo discret et animation ralentie, animation figée, ambiance masquée, ou une autre ambiance.
 - 🎨 **Réglable** : couleurs (ou celles du thème), intensité, vitesse, densité, taille, opacité, voile, flou, fond (thème, verre, transparent, nuit), cadre lumineux, et des réglages propres à certaines ambiances.
+- 🌍 **8 langues** : français, anglais, allemand, espagnol, italien, néerlandais, portugais et polonais. L'éditeur, les familles, les 113 ambiances et leurs réglages suivent la langue de votre profil, ou celle choisie dans l'option **Langue**.
 - 🪶 **Économe** : animations en pause hors de l'écran ou dans un onglet caché, images par seconde limitées, arrêt possible après un délai, et respect du réglage « animations réduites » de l'appareil.
 
 ---
@@ -76,10 +79,23 @@ ambiance: aurore
 height: 120
 ```
 
+## L'éditeur visuel
+
+| Élément | À quoi il sert |
+|---|---|
+| **Langue** | Langue de l'éditeur. « Automatique (profil) » suit la langue de votre profil Home Assistant |
+| **Ambiance** | Liste des 113 ambiances, rangées par famille (« Météo · Pluie ») |
+| **Déclenchement** | Entité, attribut, états actifs, seuils « au-dessus de » / « en dessous de », comportement quand l'entité est inactive et ambiance de remplacement |
+| **Apparence** | Couleurs, intensité, vitesse, densité, taille, opacité, voile sombre, flou, fond de la carte et bord lumineux |
+| **Réglages « … »** | Réglages propres à l'ambiance choisie (nombre de poissons, tempo, niveau fixe…), affichés seulement quand elle en a |
+| **Performances** | Images par seconde maximum et délai avant de figer l'animation |
+| **Carte enveloppée** | Éditeur de la carte placée à l'intérieur. **Code YAML** / **Éditeur visuel** bascule entre les deux modes, **Changer de carte** ouvre le sélecteur de cartes |
+
 ## Options
 
 | Option | Description | Par défaut |
 |---|---|---|
+| `language` | Langue de l'éditeur : `fr`, `en`, `de`, `es`, `it`, `nl`, `pt`, `pl` (vide = celle du profil) | profil |
 | `ambiance` | Identifiant de l'ambiance (voir la galerie, ou la liste dans l'éditeur) | `aurore` |
 | `card` | Carte à envelopper | — |
 | `height` | Hauteur d'un simple fond animé, sans carte (`120` ou `8rem`) | — |
@@ -125,6 +141,7 @@ Les 113 ambiances, dans l'ordre de l'éditeur :
 | Les animations ne bougent pas | Le réglage « animations réduites » de l'appareil est activé, ou `static_after` est réglé. |
 | Un téléphone chauffe | Baissez `max_fps` (15), `density`, ou utilisez `static_after`. |
 | La nouvelle version ne s'affiche pas | Videz le cache (Ctrl + F5). |
+| L'éditeur n'est pas dans ma langue | Choisissez-la dans l'option **Langue**, ou vérifiez la langue de votre profil. |
 
 ---
 
@@ -140,4 +157,6 @@ La carte vous plaît ? Vous pouvez m'offrir une bière 🍺
 
 Code : licence **MIT** — © kaaribou. Voir le [CHANGELOG](CHANGELOG.md).
 
-Fait partie de la collection **HOLM** — Home Orchestration & Living Management. Pour créer vos thèmes avec aperçu en direct : [HOLM Theme Editor](https://github.com/kaaribou/holm-theme).
+Fait partie de **HOLM — Home Orchestration & Living Management** : la gestion et l'orchestration intelligente de la maison.
+
+Les autres projets : [Volets HOLM](https://github.com/kaaribou/volets-holm) · [Climat HOLM](https://github.com/kaaribou/climat-holm) · [Carburant HOLM](https://github.com/kaaribou/carburant-holm) · [Commandes à la maison HOLM](https://github.com/kaaribou/commandes-holm) · [HOLM LaMetric](https://github.com/kaaribou/lametric-holm) · [HOLM My Menu](https://github.com/kaaribou/holm-mymenu) · [HOLM Lektrico](https://github.com/kaaribou/lektrico-holm) · [HOLM GitHub](https://github.com/kaaribou/github-holm) · [HOLM Cars](https://github.com/kaaribou/holm-cars) · [HOLM HP/HC](https://github.com/kaaribou/holm-tarif) · [HOLM Navbar Card](https://github.com/kaaribou/holm-navbar-card) · [HOLM Climate Card](https://github.com/kaaribou/climate-card-holm) · [HOLM Music Card](https://github.com/kaaribou/holm-music-card) · [HOLM Sentinel Card](https://github.com/kaaribou/holm-sentinel-card) · [HOLM Security Card](https://github.com/kaaribou/holm-security-card) · [HOLM Recordings Card](https://github.com/kaaribou/holm-recordings-card) · [HOLM Covers Card](https://github.com/kaaribou/holm-covers-card) · [HOLM Runtime Card](https://github.com/kaaribou/holm-runtime-card) · [HOLM Power Flow Card](https://github.com/kaaribou/holm-power-flow-card) · [HOLM Energy Cards](https://github.com/kaaribou/holm-energy-cards) · [HOLM Radiator Card](https://github.com/kaaribou/holm-radiator-card) · [HOLM Floor Card](https://github.com/kaaribou/holm-floor-card) · [HOLM Ecojoko Card](https://github.com/kaaribou/holm-ecojoko-card) · [HOLM Smoke Card](https://github.com/kaaribou/holm-smoke-card) · [HOLM Family Card](https://github.com/kaaribou/holm-family-card) · [HOLM Live Power Card](https://github.com/kaaribou/holm-live-power-card) · [HOLM Solar Optimizer Card](https://github.com/kaaribou/holm-solar-optimizer-card) · [HOLM Govee Light Card](https://github.com/kaaribou/holm-govee-light-card) · [HOLM Leapmotor Card](https://github.com/kaaribou/holm-leapmotor-card). · [HOLM Poubelles](https://github.com/kaaribou/holm-bins) · [HOLM Theme Editor](https://github.com/kaaribou/holm-theme)
